@@ -1,6 +1,6 @@
-package com.PowerOfTwo231;
+package com.lc1;
 
-public class Solution {
+public class PowerOfTwo231 {
     public boolean isPowerOfTwo(int n) {
         double max = Math.log(n)/Math.log(2);
         for(int i=0;i<=max;i++){

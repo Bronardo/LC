@@ -1,9 +1,9 @@
-import com.PowerOfTwo231.*;
+import com.lc1.*;
 
 
-public class Runner1 {
+public class PowerOfTwoRun {
     public static void main(String[] args) {
-        Solution s = new Solution();
+        PowerOfTwo231 s = new PowerOfTwo231();
 
 
         System.out.println(s.isPowerOfTwo(2));
