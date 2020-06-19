@@ -1,6 +1,4 @@
-import com.lc1.CheapestFlightsWithinKStops787;
-import com.lc1.SurroundedRegions;
-import com.lc1.ValidateIPAddress;
+import com.lc1.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,8 +9,16 @@ import java.util.Scanner;
 
 public class Runner {
     public static void main(String[] args){
+//        //130
+//        surroundedRegionsRunner();
+        //275 H-Index II
+        //hIndex2();
+        //420. Strong Password Checker
+        strongPasswordChecker();
+        //564 Find the Closest Palindrome
+        //findClosestPalindrom();
         //787 Cheapest Flights Within K Stops
-        CheapestFlightsWithinKStops787 solve = new CheapestFlightsWithinKStops787();
+        //CheapestFlightsWithinKStops787 solve = new CheapestFlightsWithinKStops787();
 /*
         int n = 3;
         int[][] edges = {{0,1,100},{1,2,100},{0,2,500}};
@@ -20,12 +26,12 @@ public class Runner {
         int dst = 2;
         int k = 0;
      */
-
-        int n = 4;
-        int[][] edges = {{0,1,1},{0,2,5},{1,2,1},{2,3,1}};
-        int src = 0;
-        int dst = 3;
-        int k = 1;
+//
+//        int n = 4;
+//        int[][] edges = {{0,1,1},{0,2,5},{1,2,1},{2,3,1}};
+//        int src = 0;
+//        int dst = 3;
+//        int k = 1;
 /*
         int n = 3;
         int[][] edges = {{0,1,100},{1,2,100},{0,2,500}};
@@ -56,8 +62,14 @@ public class Runner {
 //        String s = "1..1.1.1";
 //        ValidateIPAddress val = new ValidateIPAddress();
 //        System.out.println(val.validIPAddress(s));
-        surroundedRegionsRunner();
-
+//        int a=4;
+//        int b  = a%2 ==0? 1:2;
+//        System.out.println(b);
+//        String c = "a";
+//        c= c+b+b+Integer.parseInt("1");
+//        System.out.println(c+b);
+//        char d = '3';
+//        System.out.println((c+b).indexOf(d));
     }
 
     private static void surroundedRegionsRunner(){
@@ -107,4 +119,18 @@ public class Runner {
 //        System.out.println("b is :"+b[0][0]);
 
     }
+    private static void hIndex2(){
+        HIndexII sol = new HIndexII();
+    }
+    private static void findClosestPalindrom(){
+        FindtheClosestPalindrome sol = new FindtheClosestPalindrome();
+        String in = "1805170081";
+        System.out.println(sol.solve2(in));
+    }
+    private static void strongPasswordChecker(){
+        StrongPasswordChecker sol = new StrongPasswordChecker();
+        String in = "aaaabbaaabbaaa123456A";
+        System.out.println(sol.strongPasswordChecker(in));
+    }
+
 }
