@@ -12,10 +12,11 @@ public class Runner {
         //60. Permutation Sequence
         //permutationSequence();
         //65. Valid Number
+        validNumber();
 //        //130
 //        surroundedRegionsRunner();
         //174 Dungeon Game
-        dungeonGame();
+        //dungeonGame();
         //275 H-Index II
         //hIndex2();
         //420. Strong Password Checker
@@ -26,6 +27,8 @@ public class Runner {
         //CheapestFlightsWithinKStops787 solve = new CheapestFlightsWithinKStops787();
         //1044	Longest Duplicate Substring
         //longestDuplicateSubstring();
+        //1489. Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree
+
         /*
         int n = 3;
         int[][] edges = {{0,1,100},{1,2,100},{0,2,500}};
@@ -82,6 +85,26 @@ public class Runner {
 //        System.out.println(e.hashCode());
 //        System.out.println(f.hashCode());
 
+    }
+    private static Object fileReaderArray(String url, int mode){
+        //mode:1.Array, 2. 2d Array
+        String line ="";
+        try {
+            File myObj = new File(url);
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                line = myReader.nextLine();
+                System.out.println("line:"+line);
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        String[] rows = line.substring(1,line.length()-2).split("\\[");
+        System.out.println("rows:"+Arrays.deepToString(rows));
+
+        return null;
     }
 
     private static void surroundedRegionsRunner(){
@@ -165,11 +188,18 @@ public class Runner {
     }
     private static void validNumber(){
         ValidNumber s = new ValidNumber();
+        String in ="-.1e-1";
+        System.out.println(s.isNumber(in));
     }
     private static void dungeonGame(){
         DungeonGame s = new DungeonGame();
         int[][] in = {{-2,-3,3},{-5,-10,1},{10,30,-5}};
         System.out.println(s.calculateMinimumHP(in));
+    }
+    private static void findCriticalandPseudoCriticalEdgesinMinimumSpanningTree(){
+        FindCriticalandPseudoCriticalEdgesinMinimumSpanningTree s = new FindCriticalandPseudoCriticalEdgesinMinimumSpanningTree();
+        int n =5;
+        int
     }
 
 }
