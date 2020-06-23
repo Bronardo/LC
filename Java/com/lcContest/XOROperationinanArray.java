@@ -1,4 +1,4 @@
-package com.lc1;
+package com.lcContest;
 
 public class XOROperationinanArray {
     public int xorOperation(int n, int start) {
