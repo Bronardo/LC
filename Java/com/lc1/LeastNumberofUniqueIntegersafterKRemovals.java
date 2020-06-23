@@ -1,4 +1,4 @@
-package com.lcContest;
+package com.lc1;
 
 import java.util.*;
 

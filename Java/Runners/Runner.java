@@ -1,3 +1,13 @@
+package Runners;
+
+import com.lc1.LongestDuplicateSubstring;
+import com.lc1.StrongPasswordChecker;
+import com.lc1.SurroundedRegions;
+import com.lc1.DungeonGame;
+import com.lc1.HIndexII;
+import com.lc1.FindtheClosestPalindrome;
+import com.lc1.PermutationSequence;
+import com.lc1.FindCriticalandPseudoCriticalEdgesinMinimumSpanningTree;
 import com.lc1.*;
 
 import java.io.File;
@@ -89,21 +99,18 @@ public class Runner {
     private static Object fileReaderArray(String url, int mode){
         //mode:1.Array, 2. 2d Array
         String line ="";
-        try {
-            File myObj = new File(url);
-            Scanner myReader = new Scanner(myObj);
+        File myObj = new File(url);
+        try (Scanner myReader = new Scanner(myObj)) {
             while (myReader.hasNextLine()) {
                 line = myReader.nextLine();
                 System.out.println("line:"+line);
             }
-            myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
-            e.printStackTrace();
         }
         String[] rows = line.substring(1,line.length()-2).split("\\[");
         System.out.println("rows:"+Arrays.deepToString(rows));
-
+        
         return null;
     }
 
@@ -198,8 +205,7 @@ public class Runner {
     }
     private static void findCriticalandPseudoCriticalEdgesinMinimumSpanningTree(){
         FindCriticalandPseudoCriticalEdgesinMinimumSpanningTree s = new FindCriticalandPseudoCriticalEdgesinMinimumSpanningTree();
-        int n =5;
-        int
+        
     }
 
 }
